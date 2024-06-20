@@ -1,13 +1,13 @@
  
 import SwiftUI
 public struct TaskOne: View {
-    var Bcolor:UIColor
-    var ButoonColor:UIColor
+    var Bcolor:Color
+    var ButoonColor:Color
     var title:String
     var details:String
     var Laction:() -> Void
     var Raction:() -> Void
-    public init(Bcolor: UIColor, ButoonColor: UIColor, title: String, details: String, Laction: @escaping () -> Void, Raction: @escaping () -> Void) {
+    public init(Bcolor: Color, ButoonColor: Color, title: String, details: String, Laction: @escaping () -> Void, Raction: @escaping () -> Void) {
         self.Bcolor = Bcolor
         self.ButoonColor = ButoonColor
         self.title = title
