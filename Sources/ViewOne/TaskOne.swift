@@ -1,11 +1,15 @@
  
 import SwiftUI
 public struct TaskOne: View {
+    var Bcolor:UIColor
+    var ButoonColor:UIColor
     var title:String
     var details:String
     var Laction:() -> Void
     var Raction:() -> Void
-    public init(title: String, details: String, Laction: @escaping () -> Void, Raction: @escaping () -> Void) {
+    public init(Bcolor: UIColor, ButoonColor: UIColor, title: String, details: String, Laction: @escaping () -> Void, Raction: @escaping () -> Void) {
+        self.Bcolor = Bcolor
+        self.ButoonColor = ButoonColor
         self.title = title
         self.details = details
         self.Laction = Laction
@@ -21,7 +25,7 @@ public struct TaskOne: View {
             Spacer()
             ZStack{
                 RoundedRectangle(cornerRadius: 50)
-                    .fill(Color("B"))
+                    .fill(Color(Bcolor))
                     .mask(canvas)
                 Buttons
             }
@@ -30,7 +34,7 @@ public struct TaskOne: View {
             .frame(width: 80, height: 40)
         }
         .padding(20)
-        .background(Color("R1"),in: .rect(cornerRadius: 30,style: .circular))
+        .background(Color(ButoonColor),in: .rect(cornerRadius: 30,style: .circular))
         .padding()
     }
     var Buttons:some View{
